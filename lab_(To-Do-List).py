@@ -10,7 +10,7 @@ def to_do_list():
             file.writelines(value+"\n")
             file.close()
         elif option.lower() == "n":
-            option1 = input("do you want to list your To-Do items ? \n 1-(y) for yes\n 2-(n) for no \n 3-exit.\nChoose an option:")
+            option1 = input("Do you want to list your To-Do items ? \n 1-(y) for yes\n 2-(n) for no \n 3-exit.\nChoose an option:")
             if option1.lower() == "y":
                 file = open('to_do.txt',"r",encoding="utf-8")
                 file.seek(0)
@@ -25,4 +25,9 @@ def to_do_list():
 
 to_do_list()
 
-    
+
+
+
+
+
+
