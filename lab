@@ -1,0 +1,23 @@
+def main():
+    while True:
+        user = input("Do you want to add a new To-Do item? (YES/NO or exit): ")
+
+        if user == "YES":
+            with open("to_do.txt", "a", encoding="utf-8") as file2:
+                file2.write(input("Write assignment books: ") + "\n")
+
+        elif user == "NO":
+            user = input("Do you want to list your To-Do items? (YES/NO): ")
+
+            if user == "YES":
+                with open("to_do.txt", "r", encoding="utf-8") as file2:
+                    content = file2.read()
+                    print(content)
+
+        else:
+            user == "exit"
+            print("thank you for using the To-Do program, come back again soon")
+            break
+
+
+main()
