@@ -1,7 +1,7 @@
 while True:
-        
+    print("to exit type'0' at any time")
     user_input=input('Add a new To-Do item? (answer by "y" for yes and "n" for no.)').lower()
-    if user_input=="exit":
+    if user_input=="0":
         break
     if user_input=="y":
         new_item=input("Please type in the new To-Do item: ")
@@ -10,6 +10,8 @@ while True:
             file.close
     elif user_input=="n":
         user_input=input('List your To-Do items ? (answer "y" for yes and "n" for no.) ').lower()
+        if user_input=="exit":
+            break
         if user_input=="y":
             with open("to_do.txt", "r") as file:
                 items = file.readlines()
