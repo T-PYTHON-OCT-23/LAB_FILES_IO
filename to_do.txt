@@ -1,0 +1,6 @@
+hello
+/usr/local/bin/python3 /Users/dananaif/Desktop/python_camp/LAB_FILES_IO/to_do.py
+dana
+/usr/local/bin/python3 /Users/dananaif/Desktop/python_camp/LAB_FILES_IO/to_do.py
+danah
+danah
