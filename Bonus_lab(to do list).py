@@ -32,12 +32,11 @@ while True:
     elif option == "2":
         for index, elements in enumerate(to_do_list):
             print(f"{index+1}- {elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")
-            print("---Operartion Done---")
     elif option == "3":
+        num_of_task = int(input("Enter the number of task you have done: "))
         for index, elements in enumerate(to_do_list):
             print(f"{index+1}- {elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")
         for index, elements in enumerate(to_do_list):
-            num_of_task = int(input("Enter the number of task you have done: "))
             if index+1 ==num_of_task:
                 elements['status']='Done.'
                 print("---Operartion Done---")
@@ -48,12 +47,15 @@ while True:
                 print(f"{elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")
                 print("---Operartion Done---")
     elif option == "5":
+        title_name =input("Enter the title that you want to change their deadline: ")
         ch_deadline =input("Type a new deadline: ")
         for elements in to_do_list:
             print(f"The old deadline : {elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")       
-            elements['deadline']=ch_deadline
-            print(f"The new deadline: {elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")
-            print("---Operartion Done---")
+            if elements['title'] == title_name:
+                elements['deadline']=ch_deadline
+                print(f"The new deadline: {elements['title']} - {elements['deadline']} - {elements['datetime']} - {elements["status"]}")
+            
+        print("---Operartion Done---")
     elif option == "6":
         with open("to_do_list.json", "w", encoding="utf-8") as file:
             file.write(json.dumps(to_do_list))
