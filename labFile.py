@@ -19,12 +19,3 @@ def toDoList():
                 print("thank you for using the To-Do program, come back again soon")
                 file.close()
                 break
-
-
-
-    
-
-
-
-
-toDoList()
